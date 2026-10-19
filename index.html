@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#2a0a24"><meta name="description" content="Tạo thiệp 20/10 với tên, lời chúc, hiệu ứng giải mã và âm nhạc dành riêng cho người bạn yêu thương."><title>20/10 Studio · Gửi một chút yêu thương</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💌%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="studio.css"><script src="greeting.js"></script><script src="studio.js" defer></script>
+</head>
+<body>
+<div class="glow"></div><header><a class="brand" href="./">✿ <span>20/10 <b>STUDIO</b></span></a><span class="tag">Ngày Phụ nữ Việt Nam</span></header>
+<main>
+<section class="heading"><span class="eyebrow">MỘT TẤM THIỆP · NGÀN YÊU THƯƠNG</span><h1>Gửi một chút <em>dịu dàng.</em></h1><p>Viết lời chúc của bạn. Để những con chữ và giai điệu nói thay yêu thương.</p></section>
+<div class="layout"><section class="editor panel"><div class="section-title"><span class="step">01</span><h2>Viết thiệp của bạn</h2><span class="draft" id="draft-status"></span></div>
+<form id="studio-form">
+<label for="recipient">Gửi đến <span>*</span></label><input id="recipient" name="name" maxlength="80" required placeholder="Tên người nhận, ví dụ: Hồng Lạc" autocomplete="off">
+<label for="sender">Người gửi</label><input id="sender" name="sender" maxlength="80" placeholder="Tên bạn hoặc một biệt danh" autocomplete="name">
+<div class="label-row"><label for="message">Lời chúc <span>*</span></label><span id="count">0 / 2000</span></div><textarea id="message" name="intro" maxlength="2000" required rows="6" placeholder="Những lời yêu thương bạn muốn gửi…"></textarea>
+<div class="templates" aria-label="Gợi ý lời chúc"><button type="button" data-template="friend">🌸 Bạn bè</button><button type="button" data-template="mom">🌷 Gửi mẹ</button><button type="button" data-template="love">💗 Người thương</button></div>
+<label for="quote">Một lời nhắn cuối</label><textarea id="quote" name="quote" maxlength="300" rows="2" placeholder="Cảm ơn vì luôn ở bên…"></textarea>
+<div class="music-note"><span>♫</span><div><strong>Một giai điệu đi cùng lời chúc</strong><small>Đã kèm bản nhạc bạn cung cấp · phát khi mở thiệp</small></div><button type="button" id="listen" aria-pressed="false">Nghe thử</button></div><audio id="sample" src="assets/music.mp3" preload="none" loop></audio>
+<button class="primary" type="submit">Tạo link gửi yêu thương <span>↗</span></button>
+<p class="privacy">Không cần đăng nhập. Nội dung thiệp nằm trong link bạn chia sẻ; người có link có thể đọc lời chúc.</p>
+</form>
+<section id="result" hidden aria-labelledby="result-title"><h3 id="result-title">Thiệp của bạn đã sẵn sàng 💌</h3><label for="share-link">Link gửi cho người nhận</label><input id="share-link" readonly><div class="actions"><button id="copy" type="button">Sao chép link</button><button id="share" type="button">Chia sẻ</button><a id="open" target="_blank" rel="noopener">Mở thiệp ↗</a></div><p id="changed" hidden>Bạn đã sửa nội dung. Bấm tạo link để cập nhật thiệp trước khi gửi.</p></section><p id="status" role="status" aria-live="polite"></p>
+</section>
+<aside class="preview-area"><div class="section-title"><span class="step">02</span><h2>Một chút xem trước</h2><span class="live">● Trực tiếp</span></div><div class="phone"><iframe id="preview" title="Xem trước thiệp chúc mừng" src="card.html?preview=1" loading="eager"></iframe></div><p class="preview-caption">✧ Khi nhận thiệp, người ấy sẽ bấm <b>Giải mã 💌</b><br>để mở lời chúc cùng âm nhạc và những trái tim.</p></aside></div>
+</main><footer>Được viết bằng những điều thật lòng <span>♡</span><button id="reset" type="button">Xóa bản nháp</button></footer>
+</body></html>
